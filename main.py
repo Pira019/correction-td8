@@ -20,5 +20,7 @@ def diviseursR(m, n):
         return [n] + diviseursR(m, n + 1) 
     return diviseursR(m, n + 1)
  
-diviseurs: Callable[[int], List[int]] = lambda m: diviseursR(m, 1) 
-print(diviseurs(10))  # ex :12 [1, 2, 3, 4, 6]
+diviseurs: Callable[[int], List[int]] = lambda m: diviseursR(m, 1)  
+
+premier: Callable[[int], bool] = lambda m: diviseurs(m) == [1]
+print(premier(15))  # ex :12 [1, 2, 3, 4, 6]
