@@ -21,4 +21,7 @@ def diviseursR(m, n):
     return diviseursR(m, n + 1)
  
 diviseurs: Callable[[int], List[int]] = lambda m: diviseursR(m, 1) 
-print(diviseurs(10))  # ex :12 [1, 2, 3, 4, 6]
+print(diviseurs(100))  # ex :12 [1, 2, 3, 4, 6]
+
+
+#sommeRR(T,S) :- diviseurs(T,DIV), somme(DIV,S).
